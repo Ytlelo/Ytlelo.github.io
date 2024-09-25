@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مبادرة البيوت</title>
+    <title>الصفحة الرئيسية - مبادرة البيوت</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
         h1 {
             color: #2c3e50;
+            margin-top: 20px;
         }
 
         p {
-            font-size: 18px;
             color: #34495e;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         .btn-container {
@@ -44,16 +46,82 @@
         .button:hover {
             background-color: #2980b9;
         }
+
+        .support-button {
+            margin-top: 30px;
+            background-color: #e74c3c;
+        }
+
+        .footer {
+            margin-top: 40px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Small icon for Al Jaras Twitter */
+        .icon-twitter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .icon-twitter img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .button, .support-button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+
+            .icon-twitter img {
+                width: 25px;
+                height: 25px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>مبادرة البيوت</h1>
-    <p>اختر ما إذا كنت بحاجة إلى منزل أو ترغب في تقديم منزل.</p>
+    <h1>أهلا وسهلا بمبادرة البيوت</h1>
+    <p>كلنا بلبنان لازم نوقف حد بعض بهالأيام. فيك تقدّم بيت أو غرفة أو تطلب بيت جديد.</p>
 
     <div class="btn-container">
-        <a href="offer.html" class="button">أقدّم بيت</a>
-        <a href="request.html" class="button">أبحث عن بيت</a>
+        <a href="offer.html" class="button">قدّم بيت</a>
+        <a href="request.html" class="button">طلب بيت</a>
+    </div>
+
+    <a href="tel:+96176035157" class="button support-button">الدعم - تواصل معي</a>
+
+    <!-- Twitter icon for Al Jaras -->
+    <div class="icon-twitter">
+        <a href="https://twitter.com/aljarasmedia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Al Jaras Twitter">
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>هذه مبادرة فردية من إلياس سمعان. لبنان أحلى بمحبة بعضنا!</p>
+        <p>تواصل معي عبر: 
+            <a href="mailto:lelo@leloproduction.com">lelo@leloproduction.com</a> |
+            <a href="https://instagram.com/yt.lelo" target="_blank">Instagram</a> |
+            <a href="https://wa.me/+96176035157" target="_blank">WhatsApp</a>
+        </p>
     </div>
 
 </body>
