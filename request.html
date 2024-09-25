@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البحث عن بيت</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>البحث عن بيت</h1>
+
+    <form>
+        <label for="search">البحث عن منطقة</label>
+        <input type="text" id="search" placeholder="اكتب اسم المنطقة">
+
+        <label for="furnished">هل تبحث عن بيت مفروش؟</label>
+        <select id="furnished">
+            <option value="any">أي</option>
+            <option value="yes">نعم</option>
+            <option value="no">لا</option>
+        </select>
+
+        <label for="region">أي قضاء؟</label>
+        <input type="text" id="region" placeholder="اكتب القضاء">
+
+        <label for="price">هل البيت ببلاش؟</label>
+        <select id="price">
+            <option value="any">أي</option>
+            <option value="free">نعم</option>
+            <option value="paid">لا، بمصاري</option>
+        </select>
+
+        <button type="submit" class="button">بحث</button>
+    </form>
+
+</body>
+</html>
