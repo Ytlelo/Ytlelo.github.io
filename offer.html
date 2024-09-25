@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تقديم بيت</title>
+    <title>تقديم بيت - مبادرة إلياس سمعان</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
-            color: #333;
+            color: #2c3e50;
         }
 
         form {
@@ -44,7 +44,7 @@
         }
 
         .button {
-            background-color: #4CAF50;
+            background-color: #3498db;
             color: white;
             padding: 15px 30px;
             text-align: center;
@@ -52,18 +52,33 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        .button:hover {
-            background-color: #45a049;
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+
+            input, select, .button {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
     <h1>تقديم بيت</h1>
-    <form>
+    <p>كلنا بلبنان لازم نساعد بعض. فيك تقدّم بيت أو غرفة لحتى تساعد غيرك بهالأيام.</p>
+
+    <form enctype="multipart/form-data">
         <label for="house-type">نوع البيت</label>
         <select id="house-type">
             <option value="apartment">شقة</option>
@@ -72,13 +87,178 @@
         </select>
 
         <label for="area">المنطقة</label>
-        <input type="text" id="area" placeholder="اكتب المنطقة">
+        <select id="area">
+            <option value="">اختر منطقة</option>
+            <option value="بيروت">بيروت</option>
+            <option value="جبل لبنان">جبل لبنان</option>
+            <option value="البقاع">البقاع</option>
+            <option value="الجنوب">الجنوب</option>
+            <option value="الشمال">الشمال</option>
+            <option value="النبطية">النبطية</option>
+        </select>
 
         <label for="region">القضاء</label>
-        <input type="text" id="region" placeholder="اكتب القضاء">
+        <select id="region">
+            <option value="">اختر قضاء</option>
+            <optgroup label="بيروت">
+                <option value="بيروت">بيروت</option>
+            </optgroup>
+            <optgroup label="جبل لبنان">
+                <option value="بعبدا">بعبدا</option>
+                <option value="الحدث">الحدث</option>
+                <option value="الشياح">الشياح</option>
+                <option value="حارة حريك">حارة حريك</option>
+                <option value="برج البراجنة">برج البراجنة</option>
+                <option value="فرن الشباك">فرن الشباك</option>
+                <option value="كفرشيما">كفرشيما</option>
+                <option value="الغبيري">الغبيري</option>
+                <option value="الجديدة">الجديدة</option>
+                <option value="سن الفيل">سن الفيل</option>
+                <option value="الدكوانة">الدكوانة</option>
+                <option value="أنطلياس">أنطلياس</option>
+                <option value="الزلقا">الزلقا</option>
+                <option value="برمانا">برمانا</option>
+                <option value="بيت مري">بيت مري</option>
+                <option value="ضهور الشوير">ضهور الشوير</option>
+                <option value="بسكنتا">بسكنتا</option>
+                <option value="المنصورية">المنصورية</option>
+                <option value="الرابية">الرابية</option>
+                <option value="عين سعادة">عين سعادة</option>
+                <option value="مزرعة يشوع">مزرعة يشوع</option>
+                <option value="عاليه">عاليه</option>
+                <option value="بحمدون">بحمدون</option>
+                <option value="سوق الغرب">سوق الغرب</option>
+                <option value="شملان">شملان</option>
+                <option value="بطلون">بطلون</option>
+                <option value="عبيه">عبيه</option>
+                <option value="قرنايل">قرنايل</option>
+                <option value="دير القمر">دير القمر</option>
+                <option value="بعقلين">بعقلين</option>
+                <option value="بيت الدين">بيت الدين</option>
+                <option value="المختارة">المختارة</option>
+                <option value="الباروك">الباروك</option>
+                <option value="كفرحيم">كفرحيم</option>
+                <option value="جباع">جباع</option>
+                <option value="باتر">باتر</option>
+                <option value="المشرف">المشرف</option>
+                <option value="جونية">جونية</option>
+                <option value="ذوق مكايل">ذوق مكايل</option>
+                <option value="ذوق مصبح">ذوق مصبح</option>
+                <option value="غوسطا">غوسطا</option>
+                <option value="فقرا">فقرا</option>
+                <option value="فاريا">فاريا</option>
+                <option value="حراجل">حراجل</option>
+                <option value="درعون">درعون</option>
+                <option value="جبيل">جبيل</option>
+                <option value="عمشيت">عمشيت</option>
+                <option value="البربارة">البربارة</option>
+                <option value="بلاط">بلاط</option>
+                <option value="إهمج">إهمج</option>
+                <option value="قرطبا">قرطبا</option>
+            </optgroup>
+            <optgroup label="البقاع">
+                <option value="زحلة">زحلة</option>
+                <option value="تعنايل">تعنايل</option>
+                <option value="الفرزل">الفرزل</option>
+                <option value="المعلقة">المعلقة</option>
+                <option value="قوسايا">قوسايا</option>
+                <option value="بر الياس">بر الياس</option>
+                <option value="سعدنايل">سعدنايل</option>
+                <option value="بعلبك">بعلبك</option>
+                <option value="شمسطار">شمسطار</option>
+                <option value="دير الأحمر">دير الأحمر</option>
+                <option value="الهرمل">الهرمل</option>
+                <option value="النبي شيت">النبي شيت</option>
+                <option value="عرسال">عرسال</option>
+                <option value="راشيا">راشيا</option>
+                <option value="كفرمشكي">كفرمشكي</option>
+                <option value="ضهر الأحمر">ضهر الأحمر</option>
+                <option value="عين عطا">عين عطا</option>
+                <option value="ينطا">ينطا</option>
+                <option value="المحيدثة">المحيدثة</option>
+                <option value="جب جنين">جب جنين</option>
+                <option value="مشغرة">مشغرة</option>
+                <option value="غزة">غزة</option>
+                <option value="القرعون">القرعون</option>
+                <option value="كفريا">كفريا</option>
+            </optgroup>
+            <optgroup label="الجنوب">
+                <option value="صيدا">صيدا</option>
+                <option value="الغازية">الغازية</option>
+                <option value="مغدوشة">مغدوشة</option>
+                <option value="عبرا">عبرا</option>
+                <option value="عين الدلب">عين الدلب</option>
+                <option value="صور">صور</option>
+                <option value="العباسية">العباسية</option>
+                <option value="قانا">قانا</option>
+                <option value="برج رحال">برج رحال</option>
+                <option value="دير قانون النهر">دير قانون النهر</option>
+                <option value="جزين">جزين</option>
+                <option value="كفرحونة">كفرحونة</option>
+                <option value="عين مجدلين">عين مجدلين</option>
+                <option value="بكاسين">بكاسين</option>
+                <option value="قيتولي">قيتولي</option>
+            </optgroup>
+            <optgroup label="الشمال">
+                <option value="طرابلس">طرابلس</option>
+                <option value="الميناء">الميناء</option>
+                <option value="القلمون">القلمون</option>
+                <option value="البداوي">البداوي</option>
+                <option value="أبي سمراء">أبي سمراء</option>
+                <option value="زغرتا">زغرتا</option>
+                <option value="إهدن">إهدن</option>
+                <option value="كفرحاتا">كفرحاتا</option>
+                <option value="عشاش">عشاش</option>
+                <option value="مجدليا">مجدليا</option>
+                <option value="البترون">البترون</option>
+                <option value="شكا">شكا</option>
+                <option value="كفرعبيدا">كفرعبيدا</option>
+                <option value="راس نحاش">راس نحاش</option>
+                <option value="دوما">دوما</option>
+                <option value="أميون">أميون</option>
+                <option value="بشمزين">بشمزين</option>
+                <option value="كوسبا">كوسبا</option>
+                <option value="بترومين">بترومين</option>
+                <option value="قلحات">قلحات</option>
+                <option value="حلبا">حلبا</option>
+                <option value="ببنين">ببنين</option>
+                <option value="القبيات">القبيات</option>
+                <option value="فنيدق">فنيدق</option>
+                <option value="مشمش">مشمش</option>
+                <option value="وادي خالد">وادي خالد</option>
+                <option value="المنية">المنية</option>
+                <option value="سير الضنية">سير الضنية</option>
+                <option value="بخعون">بخعون</option>
+                <option value="دير نبوح">دير نبوح</option>
+            </optgroup>
+            <optgroup label="النبطية">
+                <option value="النبطية">النبطية</option>
+                <option value="كفررمان">كفررمان</option>
+                <option value="حبوش">حبوش</option>
+                <option value="الدوير">الدوير</option>
+                <option value="تول">تول</option>
+                <option value="مرجعيون">مرجعيون</option>
+                <option value="الخيام">الخيام</option>
+                <option value="كفركلا">كفركلا</option>
+                <option value="دير ميماس">دير ميماس</option>
+                <option value="حاصبيا">حاصبيا</option>
+                <option value="شبعا">شبعا</option>
+                <option value="كفرشوبا">كفرشوبا</option>
+                <option value="الهبارية">الهبارية</option>
+            </optgroup>
+        </select>
+
+        <label for="city">المدينة أو القرية</label>
+        <input type="text" id="city" placeholder="اكتب المدينة أو القرية">
+
+        <label for="neighborhood">الحي</label>
+        <input type="text" id="neighborhood" placeholder="اكتب الحي (اختياري)">
 
         <label for="size">مساحة البيت (م²)</label>
         <input type="number" id="size" placeholder="أدخل المساحة">
+
+        <label for="photos">رفع صور البيت (حد أقصى 5MB لكل صورة)</label>
+        <input type="file" id="photos" multiple>
 
         <label for="furnished">هل البيت مفروش؟</label>
         <select id="furnished">
@@ -86,35 +266,12 @@
             <option value="no">لا</option>
         </select>
 
-        <label for="price">هل البيت ببلاش؟</label>
-        <select id="price">
-            <option value="free">نعم</option>
-            <option value="paid">لا، بمصاري</option>
-        </select>
-
-        <label for="amount">إذا بمصاري، كم السعر؟</label>
-        <input type="number" id="amount" placeholder="أدخل السعر" disabled>
-
-        <label for="name">اسمك الكامل</label>
-        <input type="text" id="name" placeholder="اكتب اسمك">
-
-        <label for="phone">رقم الهاتف</label>
-        <input type="tel" id="phone" placeholder="أدخل رقم الهاتف">
-
         <button type="submit" class="button">إرسال</button>
     </form>
 
-    <script>
-        const priceSelect = document.getElementById("price");
-        const amountInput = document.getElementById("amount");
+    <div class="footer">
+        <p>هذه مبادرة فردية من إلياس سمعان. لبنان أحلى بمحبة بعضنا!</p>
+    </div>
 
-        priceSelect.addEventListener("change", function() {
-            if (this.value === "paid") {
-                amountInput.disabled = false;
-            } else {
-                amountInput.disabled = true;
-            }
-        });
-    </script>
 </body>
 </html>
