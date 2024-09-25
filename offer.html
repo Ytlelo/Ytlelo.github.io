@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم بيت</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>تقديم بيت</h1>
+    <form>
+        <label for="house-type">نوع البيت</label>
+        <select id="house-type">
+            <option value="apartment">شقة</option>
+            <option value="villa">فيلا</option>
+            <option value="room">غرفة</option>
+        </select>
+
+        <label for="area">المنطقة</label>
+        <input type="text" id="area" placeholder="اكتب المنطقة">
+
+        <label for="region">القضاء</label>
+        <input type="text" id="region" placeholder="اكتب القضاء">
+
+        <label for="size">مساحة البيت (م²)</label>
+        <input type="number" id="size" placeholder="أدخل المساحة">
+
+        <label for="furnished">هل البيت مفروش؟</label>
+        <select id="furnished">
+            <option value="yes">نعم</option>
+            <option value="no">لا</option>
+        </select>
+
+        <label for="price">هل البيت ببلاش؟</label>
+        <select id="price">
+            <option value="free">نعم</option>
+            <option value="paid">لا، بمصاري</option>
+        </select>
+
+        <label for="amount">إذا بمصاري، كم السعر؟</label>
+        <input type="number" id="amount" placeholder="أدخل السعر" disabled>
+
+        <label for="name">اسمك الكامل</label>
+        <input type="text" id="name" placeholder="اكتب اسمك">
+
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" placeholder="أدخل رقم الهاتف">
+
+        <button type="submit" class="button">إرسال</button>
+    </form>
+
+    <script>
+        const priceSelect = document.getElementById("price");
+        const amountInput = document.getElementById("amount");
+
+        priceSelect.addEventListener("change", function() {
+            if (this.value === "paid") {
+                amountInput.disabled = false;
+            } else {
+                amountInput.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>
