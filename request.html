@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البحث عن بيت</title>
+    <title>طلب بيت - مبادرة إلياس سمعان</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f4f4f4;
+            text-align: center;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
-            color: #333;
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
 
         form {
-            margin-top: 30px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
             background-color: #fff;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
 
         label {
@@ -44,7 +43,7 @@
         }
 
         .button {
-            background-color: #4CAF50;
+            background-color: #3498db;
             color: white;
             padding: 15px 30px;
             text-align: center;
@@ -52,41 +51,144 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #45a049;
+            background-color: #2980b9;
+        }
+
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .filter-item {
+            width: 48%;
+        }
+
+        .map-container {
+            margin-top: 30px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .filter-item {
+                width: 100%;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>البحث عن بيت</h1>
+    <h1>طلب بيت</h1>
+    <p>ساعد غيرك أو اطلب بيت بهالظروف الصعبة. استخدم الفلاتر لتلاقي البيت المناسب إلك.</p>
 
     <form>
-        <label for="search">البحث عن منطقة</label>
-        <input type="text" id="search" placeholder="اكتب اسم المنطقة">
+        <div class="filter-container">
+            <div class="filter-item">
+                <label for="area">المنطقة</label>
+                <select id="area">
+                    <option value="">اختر المنطقة</option>
+                    <option value="بيروت">بيروت</option>
+                    <option value="جبل لبنان">جبل لبنان</option>
+                    <option value="البقاع">البقاع</option>
+                    <option value="الجنوب">الجنوب</option>
+                    <option value="الشمال">الشمال</option>
+                    <option value="النبطية">النبطية</option>
+                </select>
+            </div>
 
-        <label for="furnished">هل تبحث عن بيت مفروش؟</label>
-        <select id="furnished">
-            <option value="any">أي</option>
-            <option value="yes">نعم</option>
-            <option value="no">لا</option>
-        </select>
+            <div class="filter-item">
+                <label for="price">السعر</label>
+                <select id="price">
+                    <option value="">اختر السعر</option>
+                    <option value="free">ببلاش</option>
+                    <option value="paid">بمصاري</option>
+                </select>
+            </div>
 
-        <label for="region">أي قضاء؟</label>
-        <input type="text" id="region" placeholder="اكتب القضاء">
+            <div class="filter-item">
+                <label for="furnished">هل البيت مفروش؟</label>
+                <select id="furnished">
+                    <option value="">اختر</option>
+                    <option value="yes">مفروش</option>
+                    <option value="no">غير مفروش</option>
+                    <option value="both">الاثنين</option>
+                </select>
+            </div>
 
-        <label for="price">هل البيت ببلاش؟</label>
-        <select id="price">
-            <option value="any">أي</option>
-            <option value="free">نعم</option>
-            <option value="paid">لا، بمصاري</option>
-        </select>
+            <div class="filter-item">
+                <label for="rooms">عدد الغرف</label>
+                <select id="rooms">
+                    <option value="">اختر عدد الغرف</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-4">3-4</option>
+                    <option value="5-6">5-6</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="size">مساحة البيت (م²)</label>
+                <input type="number" id="size" placeholder="أدخل المساحة">
+            </div>
+
+            <div class="filter-item">
+                <label for="property-type">نوع الملكية</label>
+                <select id="property-type">
+                    <option value="">اختر النوع</option>
+                    <option value="apartment">شقة</option>
+                    <option value="villa">فيلا</option>
+                    <option value="room">غرفة</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="amenities">وسائل الراحة (اختياري)</label>
+                <select id="amenities">
+                    <option value="">اختر</option>
+                    <option value="ac">مكيف</option>
+                    <option value="internet">إنترنت</option>
+                    <option value="electricity">كهرباء 24/7</option>
+                </select>
+            </div>
+        </div>
 
         <button type="submit" class="button">بحث</button>
+        <button type="reset" class="button" style="background-color: #e74c3c;">إعادة تعيين</button>
     </form>
+
+    <div class="map-container">
+        <h2>خريطة البيوت المتاحة</h2>
+        <!-- هنا يمكنك إدراج خريطة تفاعلية باستخدام Google Maps API -->
+    </div>
+
+    <div class="footer">
+        <p>هذه مبادرة فردية من إلياس سمعان. لبنان أحلى بمحبة بعضنا!</p>
+    </div>
 
 </body>
 </html>
